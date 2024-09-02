@@ -41,7 +41,7 @@ internal fun IsolateHolderService.startLocatorService(context: Context) {
                     Context.MODE_PRIVATE
                 )
                     .getLong(Keys.CALLBACK_DISPATCHER_HANDLE_KEY, 0)
-                val callbackInfo =
+                val callbackInfo: FlutterCallbackInformation? =
                     FlutterCallbackInformation.lookupCallbackInformation(callbackHandle)
 
                 if(callbackInfo == null) {

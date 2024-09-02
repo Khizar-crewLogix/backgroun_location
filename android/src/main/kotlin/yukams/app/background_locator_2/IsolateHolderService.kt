@@ -84,7 +84,8 @@ class IsolateHolderService : MethodChannel.MethodCallHandler, LocationUpdateList
         startLocatorService(this)
         val notification = getNotification()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            startForeground(notificationId, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_LOCATION)
+            startForeground(notificationId, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_LOCATION);
+           // startForeground(notificationId, notification);
         }else{
             startForeground(notificationId, notification);
         }
@@ -101,7 +102,8 @@ class IsolateHolderService : MethodChannel.MethodCallHandler, LocationUpdateList
         // Starting Service as foreground with a notification prevent service from closing
         val notification = getNotification()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            startForeground(notificationId, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_LOCATION)
+            startForeground(notificationId, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_LOCATION);
+            //startForeground(notificationId, notification);
         }else{
             startForeground(notificationId, notification);
         }
